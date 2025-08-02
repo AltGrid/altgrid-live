@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -e
 
 # Add user 'operator' with home and bash shell
 useradd -m -s /bin/bash -G sudo operator
@@ -8,4 +9,3 @@ useradd -m -s /bin/bash -G sudo operator
 # Set password to 'gridpass' using pre-hashed value...
 echo 'operator:$6$PZBfNY2QSawJV35H$BbEN0T6KutxQiilONsNUT4lD196vzOHh8B0SuZGXFY2nacZwM2Lf2tySCszcKkVNTUI2k0AoFVni/ZzUH6m9/.' | chpasswd -e
 
-useradd -m -s /bin/bash -G sudo operator
