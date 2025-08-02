@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+  --mode debian \
+  --distribution bookworm \
+
+  --architectures amd64 \
+  --debian-installer false \
+  --archive-areas "main contrib non-free non-free-firmware" \
+  --memtest none \
+
+  --apt-options "--yes" \
+  --aptitude-options "--assume-yes" \
+  --debconf-frontend noninteractive \
+  --debconf-priority critical  "${@}"
+
