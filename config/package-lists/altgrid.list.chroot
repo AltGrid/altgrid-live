@@ -1,5 +1,9 @@
 ## ALTGRID DEFAULT PROGRAMS ##
 
+# Bash
+bash
+bash-completion
+
 # Process viewer with style and color
 htop
 
@@ -33,8 +37,9 @@ locales
 # Control and escalation as needed
 sudo
 
-# Quality of life + nice tab completion
-bash-completion
+# User Management 
+login
+adduser
 
 # Small but beautiful — that initial flair
 neofetch
