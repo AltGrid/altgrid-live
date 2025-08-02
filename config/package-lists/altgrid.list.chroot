@@ -1,0 +1,44 @@
+## ALTGRID DEFAULT PROGRAMS ##
+
+# Process viewer with style and color
+htop
+
+# Must-have for editing scripts and config fast
+vim
+
+# For outbound SSH, fetching keys, etc.
+openssh-client
+
+# Optional — if you want to remote in
+openssh-server
+
+# Essential for network troubleshooting and scripts
+curl
+
+# Alternate fetcher, more versatile in bad networks
+wget
+
+# Info Gathering if Internet Exists
+whois
+
+# Pull scripts/tools from mirrors or USB repos
+git
+
+# Required to page through output cleanly
+less
+
+# Prevent weird errors with UTF-8, etc.
+locales
+
+# Control and escalation as needed
+sudo
+
+# Quality of life + nice tab completion
+bash-completion
+
+# Small but beautiful — that initial flair
+neofetch
+
+# Optional — hacker-core multitasking
+tmux
+
