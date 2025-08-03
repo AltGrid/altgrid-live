@@ -1,0 +1,76 @@
+================================================================================
+                        ALTGRID TERMINAL NODE — STATION CLASS
+================================================================================
+
+Welcome, Operator.
+
+This system is part of the AltGrid communication network — a decentralized,
+text-based relay infrastructure designed for minimal dependency, offline
+resilience, and field-level clarity.
+
+You are currently operating from a self-contained station shell. No graphical
+interface is present or required.
+
+--------------------------------------------------------------------------------
+  SYSTEM ENVIRONMENT
+--------------------------------------------------------------------------------
+
+  Shell:        /bin/bash
+  Editor:       vim (terminal-optimized)
+  Terminal:     pure TTY (mouse-free, framebuffer optional)
+  User Scripts: ~/bin/
+  Logs:         ~/logs/
+  Map file:     ~/map.txt         (optional — text-based zone layout)
+
+--------------------------------------------------------------------------------
+  CORE COMMANDS
+--------------------------------------------------------------------------------
+
+  hello             - sanity check script (test setup)
+  pulse             - emit basic test signal to connected node
+  reset-station     - restart the ViaText station service
+
+  All custom tools live in ~/bin and are editable in-place.
+
+--------------------------------------------------------------------------------
+  SHELL TIPS
+--------------------------------------------------------------------------------
+
+  ls                - file listing (colorized)
+  vim <file>.txt      - edit file (preferred)
+  grep "term" file  - search within a file
+  cd ..             - move up one directory
+
+  ~/.vimrc and ~/.bashrc are fully commented for reference.
+
+--------------------------------------------------------------------------------
+  NETWORK STATUS
+--------------------------------------------------------------------------------
+
+  This node is currently unconnected to LoRa mesh unless connected to:
+    > A ViaText LoRa device via USB (e.g., /dev/ttyUSB0)
+    > Another grid node over serial or file relay
+    > A sneakernet delivery system (manual .stamp exchange)
+
+--------------------------------------------------------------------------------
+  DOCUMENTATION LOCATION
+--------------------------------------------------------------------------------
+
+  All system configuration, behavior notes, and operator guidance can be found in:
+
+      ~/.altgrid/
+      ~/bin/
+      ~/logs/
+
+--------------------------------------------------------------------------------
+  OPERATOR NOTES
+--------------------------------------------------------------------------------
+
+  The Grid favors discipline.
+  All comms are text-first.
+  No assumptions. No automation without inspection.
+
+  Stay synchronized. Log your routes. Keep your receipts. Find mp3s.
+
+================================================================================
+

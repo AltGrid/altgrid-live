@@ -40,6 +40,7 @@ sudo
 # User Management 
 login
 adduser
+passwd
 
 # Small but beautiful — that initial flair
 neofetch

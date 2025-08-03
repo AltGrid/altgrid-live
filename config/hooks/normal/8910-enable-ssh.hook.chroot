@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+
+# Ensure SSH is installed
+apt-get install -y openssh-server
+
+# Enable for next boot
+systemctl enable ssh
+
+# Register with live-config so it starts at runtime
+mkdir -p /etc/live
+echo "live-config.services=ssh" > /etc/live/config.conf
+
+
