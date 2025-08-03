@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+echo "[+] Enabling SSH keygen-on-boot systemd service..."
+mkdir -p /etc/systemd/system/multi-user.target.wants
+ln -sf /etc/systemd/system/ssh-keygen-firstboot.service \
+       /etc/systemd/system/multi-user.target.wants/ssh-keygen-firstboot.service
+
