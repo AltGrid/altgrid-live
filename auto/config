@@ -1,4 +1,4 @@
-#!/bin/sh
+i#!/bin/sh
 
 set -e
 
@@ -12,5 +12,6 @@ lb config noauto \
   --apt-options "--yes" \
   --aptitude-options "--assume-yes" \
   --debconf-frontend noninteractive \
+  --bootappend-live "username=operator hostname=ALTGRID" \
   --debconf-priority critical  "${@}"
 

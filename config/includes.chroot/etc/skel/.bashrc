@@ -15,17 +15,13 @@ esac
 # -------------------------------------------------------------------
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# -------------------------------------------------------------------
-# PROMPT SETUP — Color-coded terminal
-# -------------------------------------------------------------------
-# Color references (AltGrid Palette):
-# Deep Navy     = \[\e[38;2;0;20;35m\]       (Base Text)
-# Saddle Brown  = \[\e[38;2;139;92;41m\]     (Host)
-# Warm Beige    = \[\e[38;2;255;225;186m\]   (Path)
-# Blue Accent   = \[\e[38;2;0;102;177m\]     (Info / Hints)
-# Signal Yellow = \[\e[38;2;255;247;115m\]   (Success / Alerts)
+# AltGrid PS1 Color Scheme
+# Colors:
+#   ALTGRID@HOST   — classic terminal green
+#   path           — soft signal yellow
+#   $ symbol       — deep terminal blue-gray
 
-PS1='\[\e[38;2;139;92;41m\][ALTGRID@\h\[\e[0m\]:\[\e[38;2;255;225;186m\]\w\[\e[0m\]]\[\e[38;2;0;20;35m\]\$\[\e[0m\] '
+PS1='\[\e[38;2;102;255;102m\][ALTGRID@\h\[\e[0m\]:\[\e[38;2;245;235;155m\]\w\[\e[0m\]\[\e[38;2;70;70;100m\]\$\[\e[0m\] '
 
 # -------------------------------------------------------------------
 # HISTORY — Clean and efficient tracking

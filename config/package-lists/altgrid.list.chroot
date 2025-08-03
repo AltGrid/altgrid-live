@@ -4,9 +4,6 @@
 bash
 bash-completion
 
-# Process viewer with style and color
-htop
-
 # Must-have for editing scripts and config fast
 vim
 
@@ -42,9 +39,15 @@ login
 adduser
 passwd
 
-# Small but beautiful — that initial flair
+# Sys Info 
 neofetch
 
-# Optional — hacker-core multitasking
+# Hacker-core multitasking
 tmux
+screen
+
+# Information 
+tree 
+top
+htop
 

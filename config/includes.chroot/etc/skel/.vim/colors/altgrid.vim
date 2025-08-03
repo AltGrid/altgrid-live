@@ -1,67 +1,66 @@
-" altgrid.vim — AltGrid Color Alignment (Fallout-TUI Inspired)
-" Rewritten to match deep navy, brown, beige, blue, and signal yellow
-" Author: Leo Blanchette, 2025
-" License: Public Domain / Copyleft Forever
+" altgrid.vim - Fallout Terminal / AltGrid Survival Theme
+" Matches AltGrid bash prompt color scheme: cold green, signal yellow, muted path gray
 
 set background=dark
 hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
 
 let g:colors_name = "altgrid"
 
-" ------------------------------------------------------------------------------
-" BASIC UI COLORS — Terminal layout, focus, cursor
-" ------------------------------------------------------------------------------
+" Base Colors (approximating the RGB codes used in Bash PS1)
+" -----------------------------------------------
+" [38;2;102;255;102]  — terminal green
+" [38;2;245;235;155]  — yellow alert
+" [38;2;70;70;100]    — terminal gray/blue
 
-hi Normal         ctermfg=230  ctermbg=NONE       " Warm Beige foreground
-hi Cursor         ctermfg=233  ctermbg=230        " Deep Navy on beige
-hi CursorLine     ctermbg=234                     " Slightly lighter navy
-hi LineNr         ctermfg=94   ctermbg=NONE       " Saddle Brown
-hi CursorLineNr   ctermfg=228  ctermbg=NONE gui=bold " Signal Yellow
+" Default UI
+hi Normal       guifg=#d0d0d0 guibg=#000000 ctermfg=252 ctermbg=NONE
+hi CursorLine   guibg=#121212 ctermbg=236
+hi CursorColumn guibg=#121212
+hi LineNr       guifg=#444444 guibg=NONE
+hi CursorLineNr guifg=#66ff66 guibg=NONE ctermfg=83
+hi StatusLine   guifg=#000000 guibg=#66ff66 ctermfg=16 ctermbg=83
+hi VertSplit    guifg=#404040 guibg=#000000
 
-hi StatusLine     ctermfg=233  ctermbg=230  gui=bold " Invert: dark on beige
-hi StatusLineNC   ctermfg=233  ctermbg=234
-hi VertSplit      ctermfg=234  ctermbg=234
+" Syntax Highlighting
+hi Comment      guifg=#707070 ctermfg=244
+hi Constant     guifg=#f5eb9b ctermfg=229     " soft yellow (strings, numbers)
+hi Identifier   guifg=#66ff66 ctermfg=83      " function/variable names
+hi Statement    guifg=#66ff66 ctermfg=83      " keywords like if, for
+hi PreProc      guifg=#70a0ff ctermfg=75
+hi Type         guifg=#f5eb9b ctermfg=229
+hi Special      guifg=#cccccc ctermfg=250
+hi Underlined   guifg=#66ff66 gui=underline
+hi Todo         guifg=#000000 guibg=#f5eb9b ctermfg=16 ctermbg=229
 
-hi Pmenu          ctermfg=233  ctermbg=94         " Brown menu background
-hi PmenuSel       ctermfg=233  ctermbg=228        " Yellow highlight
-hi Visual         ctermfg=233  ctermbg=238        " Grey select
-hi Search         ctermfg=233  ctermbg=228        " Yellow search highlight
+" Search / Visual Mode
+hi Search       guibg=#f5eb9b guifg=#000000 ctermbg=229 ctermfg=16
+hi Visual       guibg=#333366 ctermbg=60
+hi IncSearch    guibg=#f5eb9b guifg=#000000
 
-" ------------------------------------------------------------------------------
-" SYNTAX — Language structures, comments, constants
-" ------------------------------------------------------------------------------
+" Diff
+hi DiffAdd      guibg=#335533
+hi DiffChange   guibg=#222255
+hi DiffDelete   guifg=#aa2222 guibg=#331111
+hi DiffText     guibg=#6666cc
 
-hi Comment        ctermfg=240                     " Dim gray
-hi Constant       ctermfg=228                     " Signal yellow (standout)
-hi Identifier     ctermfg=230                     " Beige (human-friendly vars)
-hi Statement      ctermfg=32                      " Blue accent (keywords)
-hi PreProc        ctermfg=72                      " Cyan tint (macros)
-hi Type           ctermfg=94                      " Saddle brown (strong type)
-hi Special        ctermfg=33                      " Blue-bright (punctuation etc.)
-hi Underlined     ctermfg=32
-hi Todo           ctermfg=233 ctermbg=228         " Dark on yellow
-hi Error          ctermfg=15  ctermbg=88          " White on red
+" Tabs / Pmenu
+hi Pmenu        guibg=#1c1c1c guifg=#cccccc
+hi PmenuSel     guibg=#66ff66 guifg=#000000
 
-" ------------------------------------------------------------------------------
-" FILETYPE-AGNOSTIC
-" ------------------------------------------------------------------------------
+" Directory browsing
+hi Directory    guifg=#70a0ff ctermfg=75
 
-hi Title          ctermfg=228 gui=bold
-hi Directory      ctermfg=32  gui=bold
-hi WarningMsg     ctermfg=196 gui=bold
-hi ModeMsg        ctermfg=32
-hi Question       ctermfg=228
+" MatchParen
+hi MatchParen   guibg=#333366 guifg=#ffffff
 
-" ------------------------------------------------------------------------------
-" ALTGRID-SPECIFIC CLASSES
-" ------------------------------------------------------------------------------
+" Error / Alerts
+hi Error        guifg=#ffffff guibg=#aa0000
+hi WarningMsg   guifg=#f5eb9b
 
-hi AltGridID        ctermfg=32                    " Blue accent (ID)
-hi AltGridRoute     ctermfg=94                    " Saddle brown
-hi AltGridMetadata  ctermfg=72                    " Cyan
-hi AltGridDebug     ctermfg=240                   " Dim gray
+" Spellcheck (if enabled)
+hi SpellBad     guisp=#ff2222 gui=undercurl
+hi SpellCap     guisp=#66ff66 gui=undercurl
 
