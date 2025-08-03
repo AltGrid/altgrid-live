@@ -1,5 +1,5 @@
-" altgrid.vim — Fallout-Inspired Vim Colorscheme
-" Designed for ALTGRID terminal systems — no GUI, 256-color safe
+" altgrid.vim — AltGrid Color Alignment (Fallout-TUI Inspired)
+" Rewritten to match deep navy, brown, beige, blue, and signal yellow
 " Author: Leo Blanchette, 2025
 " License: Public Domain / Copyleft Forever
 
@@ -13,58 +13,55 @@ endif
 let g:colors_name = "altgrid"
 
 " ------------------------------------------------------------------------------
-" BASIC UI COLORS
+" BASIC UI COLORS — Terminal layout, focus, cursor
 " ------------------------------------------------------------------------------
 
-hi Normal       ctermfg=46  ctermbg=NONE
-hi Cursor       ctermfg=0   ctermbg=46
-hi CursorLine   ctermbg=235
-hi LineNr       ctermfg=22  ctermbg=NONE
-hi CursorLineNr ctermfg=118 ctermbg=NONE  gui=bold
+hi Normal         ctermfg=230  ctermbg=NONE       " Warm Beige foreground
+hi Cursor         ctermfg=233  ctermbg=230        " Deep Navy on beige
+hi CursorLine     ctermbg=234                     " Slightly lighter navy
+hi LineNr         ctermfg=94   ctermbg=NONE       " Saddle Brown
+hi CursorLineNr   ctermfg=228  ctermbg=NONE gui=bold " Signal Yellow
 
-hi StatusLine   ctermfg=0   ctermbg=46    gui=bold
-hi StatusLineNC ctermfg=0   ctermbg=22
-hi VertSplit    ctermfg=22  ctermbg=22
+hi StatusLine     ctermfg=233  ctermbg=230  gui=bold " Invert: dark on beige
+hi StatusLineNC   ctermfg=233  ctermbg=234
+hi VertSplit      ctermfg=234  ctermbg=234
 
-hi Pmenu        ctermfg=0   ctermbg=28
-hi PmenuSel     ctermfg=0   ctermbg=46
-hi Visual       ctermfg=0   ctermbg=28
-hi Search       ctermfg=0   ctermbg=154
-
-" ------------------------------------------------------------------------------
-" TEXT & SYNTAX — Subtle shades, minimal glow
-" ------------------------------------------------------------------------------
-
-hi Comment      ctermfg=22
-hi Constant     ctermfg=120
-hi Identifier   ctermfg=118
-hi Statement    ctermfg=82
-hi PreProc      ctermfg=70
-hi Type         ctermfg=83
-hi Special      ctermfg=76
-hi Underlined   ctermfg=119
-hi Todo         ctermfg=0   ctermbg=190
-hi Error        ctermfg=15  ctermbg=88
+hi Pmenu          ctermfg=233  ctermbg=94         " Brown menu background
+hi PmenuSel       ctermfg=233  ctermbg=228        " Yellow highlight
+hi Visual         ctermfg=233  ctermbg=238        " Grey select
+hi Search         ctermfg=233  ctermbg=228        " Yellow search highlight
 
 " ------------------------------------------------------------------------------
-" Filetype-Agnostic Tags
+" SYNTAX — Language structures, comments, constants
 " ------------------------------------------------------------------------------
 
-hi Title        ctermfg=46  gui=bold
-hi Directory    ctermfg=46  gui=bold
-hi WarningMsg   ctermfg=196 gui=bold
-hi ModeMsg      ctermfg=46
-hi Question     ctermfg=154
+hi Comment        ctermfg=240                     " Dim gray
+hi Constant       ctermfg=228                     " Signal yellow (standout)
+hi Identifier     ctermfg=230                     " Beige (human-friendly vars)
+hi Statement      ctermfg=32                      " Blue accent (keywords)
+hi PreProc        ctermfg=72                      " Cyan tint (macros)
+hi Type           ctermfg=94                      " Saddle brown (strong type)
+hi Special        ctermfg=33                      " Blue-bright (punctuation etc.)
+hi Underlined     ctermfg=32
+hi Todo           ctermfg=233 ctermbg=228         " Dark on yellow
+hi Error          ctermfg=15  ctermbg=88          " White on red
 
 " ------------------------------------------------------------------------------
-" AltGrid-Specific Hints
+" FILETYPE-AGNOSTIC
 " ------------------------------------------------------------------------------
 
-" You can assign special color groups in custom syntax files for .stamp, .grid, etc
-hi AltGridID        ctermfg=118
-hi AltGridRoute     ctermfg=82
-hi AltGridMetadata  ctermfg=72
-hi AltGridDebug     ctermfg=240
+hi Title          ctermfg=228 gui=bold
+hi Directory      ctermfg=32  gui=bold
+hi WarningMsg     ctermfg=196 gui=bold
+hi ModeMsg        ctermfg=32
+hi Question       ctermfg=228
 
-" These won't be used unless your syntax files define them
+" ------------------------------------------------------------------------------
+" ALTGRID-SPECIFIC CLASSES
+" ------------------------------------------------------------------------------
+
+hi AltGridID        ctermfg=32                    " Blue accent (ID)
+hi AltGridRoute     ctermfg=94                    " Saddle brown
+hi AltGridMetadata  ctermfg=72                    " Cyan
+hi AltGridDebug     ctermfg=240                   " Dim gray
 
