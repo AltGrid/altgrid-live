@@ -4,9 +4,6 @@
 
 Welcome, Operator.
 
-This shell is now active. You are operating in a full-text station.
-No GUI is present. None is expected.
-
 This node is part of the AltGrid network — a resilient, offline, 
 text-based relay for field communication, packet routing, and 
 sneakernet exchange.

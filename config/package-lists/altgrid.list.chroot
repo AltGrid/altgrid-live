@@ -15,6 +15,7 @@ openssh-server
 
 # Essential for network troubleshooting and scripts
 curl
+minicom
 
 # Alternate fetcher, more versatile in bad networks
 wget
@@ -49,4 +50,8 @@ screen
 # Information 
 tree 
 htop
+
+# Flair 
+figlet
+
 

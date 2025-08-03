@@ -4,21 +4,6 @@
 
 " ------------------------------------------------------------------------------
 " COLOR + STYLE — AltGrid default theme: monochrome green on black
-" ------------------------------------------------------------------------------
-
-set background=dark
-
-" Prefer custom AltGrid theme if present, otherwise fall back to desert
-if filereadable(expand("~/.vim/colors/altgrid.vim"))
-  colorscheme altgrid
-else
-  colorscheme desert
-endif
-
-" Enable 24-bit color support only if terminal supports it
-if has("termguicolors")
-  set termguicolors
-endif
 
 " Make Normal background transparent if terminal supports it
 highlight Normal ctermbg=NONE
@@ -28,7 +13,6 @@ highlight Normal ctermbg=NONE
 " ------------------------------------------------------------------------------
 
 set number                 " Show absolute line numbers on the left
-set relativenumber         " Show relative movement from cursor line
 
 " ------------------------------------------------------------------------------
 " INDENTATION — Always favor 4-space soft tabs

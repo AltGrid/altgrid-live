@@ -2,6 +2,10 @@
 # This configuration combines Debian’s safe defaults with AltGrid operator logic.
 # Colors match the AltGrid survival palette: cold base, warm alert, signal clarity.
 
+clear
+echo "Welcome to..."
+figlet "ALTGRID"
+
 # -------------------------------------------------------------------
 # GUARD: Exit if not interactive shell
 # -------------------------------------------------------------------
@@ -10,18 +14,16 @@ case $- in
       *) return ;;
 esac
 
+#--------------------------------------------------------------------
+# COLOR 
+#--------------------------------------------------------------------
+PS1='\[\e[37m\][\[\e[93m\u\[\e[37m\]@\[\e[94m\h\[\e[37m\]] \[\e[92m\w\[\e[37m\]\$ \[\e[0m\]'
+
 # -------------------------------------------------------------------
 # PATH BOOTSTRAP — Honor local operator toolchain
 # -------------------------------------------------------------------
 export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-# AltGrid PS1 Color Scheme
-# Colors:
-#   ALTGRID@HOST   — classic terminal green
-#   path           — soft signal yellow
-#   $ symbol       — deep terminal blue-gray
-
-PS1='\[\e[38;2;102;255;102m\][ALTGRID@\h\[\e[0m\]:\[\e[38;2;245;235;155m\]\w\[\e[0m\]\[\e[38;2;70;70;100m\]\$\[\e[0m\] '
 
 # -------------------------------------------------------------------
 # HISTORY — Clean and efficient tracking
